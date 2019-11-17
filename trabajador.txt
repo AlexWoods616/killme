@@ -1,0 +1,3 @@
+Tom Lucitor 25 001 1000 Manager
+Marco Diaz 24 002 950 Seguridad
+Mark Bread 27 003 1200 Waiter
