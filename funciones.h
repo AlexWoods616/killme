@@ -30,27 +30,32 @@ void lee(string m) {
 		cout << "No se pudo abrir el archivo";
 		exit(1);
 	}
-	while (!archivo.eof) {
+	while (!archivo.eof()) {
 		getline(archivo, texto);
 	}
 	archivo.close();
 }
 
-
-
-/*void leer_hasta() {
-	archivo.open("me.txt", ios::in);
+void buscar_t() {
+	archivo.open("trabajador.txt", ios::in);
 	if (archivo.is_open()) {
-		char	 a;
+		char nombre[50];
+		char apellido[50];
+		int edad;
+		int codigo;
+		double salario;
+		char puesto[50];
 		while (!archivo.eof()) {
-			a = archivo.get();
-			if (a != int()) {
-				a = archivo.get();
-				cout << a;
-			}
+			archivo >> nombre >> apellido >> edad >> codigo >> salario >> puesto;
+			cout << "Nombre: " << nombre << endl;
+			cout << "Apellido: " << apellido << endl;
+			cout << "Edad: " << edad << endl;
+			cout << "Codigo: " << codigo << endl;
+			cout << "Salario: " << salario << endl;
+			cout << "Puesto: " << puesto << endl;
 		}
 		archivo.close();
 	}
 	else
-		cout << "No hay";
-}*/
+		cout << "El archivo no se pudo leer";
+}
